@@ -90,16 +90,20 @@ export default function Footer() {
                         <h4 className="font-semibold mb-4 text-slate-200">聯絡資訊</h4>
                         <ul className="space-y-3">
                             <li className="flex items-start gap-2 text-slate-400 text-sm">
-                                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                                <span>台南市中西區中山路79號</span>
+                                <span className="font-semibold text-slate-300 flex-shrink-0">客服專線：</span>
+                                <span>06-3001-080</span>
                             </li>
-                            <li className="flex items-center gap-2 text-slate-400 text-sm">
-                                <Phone className="w-4 h-4 flex-shrink-0" />
-                                <span>(06) 226-1251</span>
+                            <li className="flex items-start gap-2 text-slate-400 text-sm">
+                                <span className="font-semibold text-slate-300 flex-shrink-0">客服時間：</span>
+                                <span>週一至週五 8:30～12:00 、13:00～17:30</span>
                             </li>
-                            <li className="flex items-center gap-2 text-slate-400 text-sm">
-                                <Mail className="w-4 h-4 flex-shrink-0" />
-                                <span>service@nani.com.tw</span>
+                            <li className="flex items-start gap-2 text-slate-400 text-sm">
+                                <span className="font-semibold text-slate-300 flex-shrink-0">信箱：</span>
+                                <span>nani@tned.nani.com.tw</span>
+                            </li>
+                            <li className="flex items-start gap-2 text-slate-400 text-sm">
+                                <span className="font-semibold text-slate-300 flex-shrink-0">地址：</span>
+                                <span>台南市南區(安平工業區)新義路6號</span>
                             </li>
                         </ul>
                     </div>

@@ -20,7 +20,6 @@ export default function Navbar() {
     const hoverColor = isScrolled ? 'hover:text-primary-600' : 'hover:text-secondary-300';
     const brandColor = isScrolled ? 'text-primary-800' : 'text-white';
     const subtitleColor = isScrolled ? 'text-slate-500' : 'text-slate-200';
-    const logoFilter = isScrolled ? '' : 'brightness-0 invert';
     const buttonClass = isScrolled ? 'text-slate-700' : 'text-white';
 
     return (
@@ -43,7 +42,7 @@ export default function Navbar() {
                         <img
                             src="nani-ed-group-logo.png"
                             alt="南一書局"
-                            className={`h-10 w-auto object-contain transition-all duration-300 ${logoFilter}`}
+                            className="h-10 w-auto object-contain transition-all duration-300"
                         />
                         <div className="hidden sm:block">
                             <span className={`text-lg font-bold transition-colors duration-300 ${brandColor}`}>南一書局</span>

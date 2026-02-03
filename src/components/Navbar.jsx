@@ -33,7 +33,7 @@ export default function Navbar() {
                         whileHover={{ scale: 1.02 }}
                     >
                         <img
-                            src="/nani-ed-group-logo.png"
+                            src="nani-ed-group-logo.png"
                             alt="南一書局"
                             className="h-10 w-auto object-contain"
                         />

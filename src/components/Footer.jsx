@@ -44,7 +44,7 @@ export default function Footer() {
                     <div>
                         <div className="flex items-center gap-3 mb-4">
                             <img
-                                src="/nani-ed-group-text-logo.png"
+                                src="nani-ed-group-text-logo.png"
                                 alt="南一書局"
                                 className="h-10 w-auto object-contain brightness-0 invert"
                             />

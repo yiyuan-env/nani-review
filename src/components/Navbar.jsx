@@ -15,6 +15,14 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Dynamic colors based on scroll state
+    const textColor = isScrolled ? 'text-slate-700' : 'text-white';
+    const hoverColor = isScrolled ? 'hover:text-primary-600' : 'hover:text-secondary-300';
+    const brandColor = isScrolled ? 'text-primary-800' : 'text-white';
+    const subtitleColor = isScrolled ? 'text-slate-500' : 'text-slate-200';
+    const logoFilter = isScrolled ? '' : 'brightness-0 invert';
+    const buttonClass = isScrolled ? 'text-slate-700' : 'text-white';
+
     return (
         <motion.nav
             initial={{ y: -100 }}
@@ -35,11 +43,11 @@ export default function Navbar() {
                         <img
                             src="nani-ed-group-logo.png"
                             alt="南一書局"
-                            className="h-10 w-auto object-contain"
+                            className={`h-10 w-auto object-contain transition-all duration-300 ${logoFilter}`}
                         />
                         <div className="hidden sm:block">
-                            <span className="text-lg font-bold text-primary-800">南一書局</span>
-                            <span className="block text-xs text-slate-500 -mt-0.5">升高中總複習</span>
+                            <span className={`text-lg font-bold transition-colors duration-300 ${brandColor}`}>南一書局</span>
+                            <span className={`block text-xs -mt-0.5 transition-colors duration-300 ${subtitleColor}`}>升高中總複習</span>
                         </div>
                     </motion.a>
 
@@ -49,7 +57,7 @@ export default function Navbar() {
                             <motion.a
                                 key={link.id}
                                 href={link.href}
-                                className="px-4 py-2 text-slate-700 hover:text-primary-600 font-medium rounded-lg hover:bg-primary-50 transition-colors"
+                                className={`px-4 py-2 font-medium rounded-lg hover:bg-white/10 transition-colors duration-300 ${textColor} ${hoverColor}`}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
@@ -71,13 +79,13 @@ export default function Navbar() {
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
+                        className={`md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors ${buttonClass}`}
                         aria-label="Toggle menu"
                     >
                         {isOpen ? (
-                            <X className="w-6 h-6 text-slate-700" />
+                            <X className="w-6 h-6" />
                         ) : (
-                            <Menu className="w-6 h-6 text-slate-700" />
+                            <Menu className="w-6 h-6" />
                         )}
                     </button>
                 </div>
